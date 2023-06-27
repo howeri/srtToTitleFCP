@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fcpxml>
+
+<fcpxml version="1.11">
+    <resources>
+        <format id="r1" name="FFVideoFormat1080p2398" frameDuration="1001/24000s" width="1920" height="1080" colorSpace="1-1-1 (Rec. 709)"/>
+        <effect id="r2" name="Basic Title" uid=".../Titles.localized/Bumper:Opener.localized/Basic Title.localized/Basic Title.moti"/>
+    </resources>
+    <library location="xxx">
+        <event name="6-25-23" uid="008F09C1-50CA-4C90-B842-33E0B28BCD29">
+            <project name="titleTest" uid="703957C3-66A7-48E1-B4E5-9FBD6EF03117" modDate="2023-06-26 00:16:01 -0700">
+                <sequence format="r1" duration="2402400/120000s" tcStart="0s" tcFormat="NDF" audioLayout="stereo" audioRate="48k">
+                    <spine>
+<title ref="r2" offset="30720/120000s" name="大家好我是XXX - Basic Title" start="86486400/24000s" duration="737280/120000s">
+    <param name="Position" key="9999/999166631/999166633/1/100/101" value="1.0188 -450.109"/>
+    <param name="Flatten" key="9999/999166631/999166633/2/351" value="1"/>
+    <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"/>
+    <text>
+        <text-style ref="ts1">大家好我是XXX</text-style>
+    </text>
+    <text-style-def id="ts1">
+        <text-style font="Helvetica" fontSize="63" fontFace="Regular" fontColor="1 1 1 1" alignment="center"/>
+    </text-style-def>
+</title>
+<title ref="r2" offset="798720/120000s" name="我要跟大家開箱分享XXX - Basic Title" start="86486400/24000s" duration="276480/120000s">
+    <param name="Position" key="9999/999166631/999166633/1/100/101" value="1.0188 -450.109"/>
+    <param name="Flatten" key="9999/999166631/999166633/2/351" value="1"/>
+    <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"/>
+    <text>
+        <text-style ref="ts1">我要跟大家開箱分享XXX</text-style>
+    </text>
+    <text-style-def id="ts2">
+        <text-style font="Helvetica" fontSize="63" fontFace="Regular" fontColor="1 1 1 1" alignment="center"/>
+    </text-style-def>
+</title>
+<title ref="r2" offset="1105920/120000s" name="XXXX - Basic Title" start="86486400/24000s" duration="276480/120000s">
+    <param name="Position" key="9999/999166631/999166633/1/100/101" value="1.0188 -450.109"/>
+    <param name="Flatten" key="9999/999166631/999166633/2/351" value="1"/>
+    <param name="Alignment" key="9999/999166631/999166633/2/354/999169573/401" value="1 (Center)"/>
+    <text>
+        <text-style ref="ts1">XXXX</text-style>
+    </text>
+    <text-style-def id="ts3">
+        <text-style font="Helvetica" fontSize="63" fontFace="Regular" fontColor="1 1 1 1" alignment="center"/>
+    </text-style-def>
+</title>
+
+                    </spine>
+                </sequence>
+            </project>
+        </event>
+        <smart-collection name="Projects" match="all">
+            <match-clip rule="is" type="project"/>
+        </smart-collection>
+        <smart-collection name="All Video" match="any">
+            <match-media rule="is" type="videoOnly"/>
+            <match-media rule="is" type="videoWithAudio"/>
+        </smart-collection>
+        <smart-collection name="Audio Only" match="all">
+            <match-media rule="is" type="audioOnly"/>
+        </smart-collection>
+        <smart-collection name="Stills" match="all">
+            <match-media rule="is" type="stills"/>
+        </smart-collection>
+        <smart-collection name="Favorites" match="all">
+            <match-ratings value="favorites"/>
+        </smart-collection>
+    </library>
+</fcpxml>
